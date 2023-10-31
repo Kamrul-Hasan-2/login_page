@@ -18,6 +18,13 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
+              height: 60,
+            ),
+            Text("Login Page",
+                style: TextStyle(
+                  fontSize: 25,
+                )),
+            SizedBox(
               height: 20.0,
             ),
             SizedBox(
@@ -31,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               height: 50.0,
             ),
-            Text("Login Page"),
+
             SizedBox(
               height: 20.0,
             ),
@@ -42,17 +49,19 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             SizedBox(
-              height: 15.0,
+              height: 25.0,
             ),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
+                // constraints: BoxConstraints(
+                //   maxHeight: 50,
+                //   maxWidth: 60,
+                // ),
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(
-              height: 10.0,
-            ),
+
             // Container(
             //   width: 50, // Set the width and height to make it circular
             //   height: 50,
@@ -77,13 +86,40 @@ class _MainScreenState extends State<MainScreen> {
             //     ),
             //   ),
             // ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                "Login",
-              ),
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            // ElevatedButton(
+            //   onPressed: () {},
+            //   // child: Text(
+            //   "Login",
+            // ),
+            SizedBox(
+              height: 60,
+            ),
+            Container(
+              height: 50.0,
+              width: 250.0,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                //   ),
+
+                //   style: ButtonStyle(
+                //     shape: MaterialStateProperty.all(
+                //       RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(50.0),
+                //       ),
+                //     ),
               ),
             ),
           ],
